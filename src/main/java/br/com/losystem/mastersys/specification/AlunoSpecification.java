@@ -1,12 +1,12 @@
 package br.com.losystem.mastersys.specification;
 
-import br.com.losystem.mastersys.dto.request.AlunoFiltrorRequest;
+import br.com.losystem.mastersys.dto.request.AlunoFiltroRequest;
 import br.com.losystem.mastersys.model.Aluno;
 import org.springframework.data.jpa.domain.Specification;
 
 public class AlunoSpecification {
 
-    public static Specification<Aluno> comFiltros(AlunoFiltrorRequest filtro) {
+    public static Specification<Aluno> comFiltros(AlunoFiltroRequest filtro) {
         return Specification
                 .where(nomeContem(filtro.nome()))
                 .and(emailContem(filtro.email()))

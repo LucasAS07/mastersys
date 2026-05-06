@@ -38,6 +38,7 @@ public class MatriculaModalidade {
     @JoinColumn(name = "graduacao_id")
     private Graduacao graduacao;
 
+    @PrePersist
     public void prePersist() {
         if (dataInicio == null) {
             dataInicio = LocalDate.now();

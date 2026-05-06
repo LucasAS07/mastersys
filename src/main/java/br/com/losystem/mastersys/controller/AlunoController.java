@@ -1,7 +1,7 @@
 package br.com.losystem.mastersys.controller;
 
 import br.com.losystem.mastersys.doc.AlunoControllerDoc;
-import br.com.losystem.mastersys.dto.request.AlunoFiltrorRequest;
+import br.com.losystem.mastersys.dto.request.AlunoFiltroRequest;
 import br.com.losystem.mastersys.dto.request.AlunoRequest;
 import br.com.losystem.mastersys.dto.response.AlunoResponse;
 import br.com.losystem.mastersys.service.AlunoService;
@@ -27,7 +27,7 @@ public class AlunoController implements AlunoControllerDoc {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
-    public Page<AlunoResponse> listar(AlunoFiltrorRequest filtro,Pageable pageable) {
+    public Page<AlunoResponse> listar(AlunoFiltroRequest filtro, Pageable pageable) {
         return alunoService.listar(filtro,pageable);
     }
 

@@ -33,6 +33,7 @@ public class Matricula {
     @JoinColumn(name = "aluno_id")
     private Aluno aluno;
 
+    @PrePersist
     public void prePersit() {
         if (dataMatricula == null) {
             dataMatricula = LocalDate.now();

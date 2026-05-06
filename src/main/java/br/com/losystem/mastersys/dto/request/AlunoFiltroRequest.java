@@ -1,6 +1,6 @@
 package br.com.losystem.mastersys.dto.request;
 
-public record AlunoFiltrorRequest(
+public record AlunoFiltroRequest(
         String nome,
         String email,
         String celular,

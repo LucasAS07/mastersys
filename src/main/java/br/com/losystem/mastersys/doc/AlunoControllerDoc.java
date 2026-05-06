@@ -1,6 +1,6 @@
 package br.com.losystem.mastersys.doc;
 
-import br.com.losystem.mastersys.dto.request.AlunoFiltrorRequest;
+import br.com.losystem.mastersys.dto.request.AlunoFiltroRequest;
 import br.com.losystem.mastersys.dto.request.AlunoRequest;
 import br.com.losystem.mastersys.dto.response.AlunoResponse;
 import br.com.losystem.mastersys.exception.ErroResponse;
@@ -74,7 +74,7 @@ public interface AlunoControllerDoc {
     )
     Page<AlunoResponse> listar(
             @Parameter(description = "Filtros opcionais para busca de alunos")
-            AlunoFiltrorRequest filtro,
+            AlunoFiltroRequest filtro,
 
             @Parameter(description = "Informações de paginação e ordenação")
             Pageable pageable
